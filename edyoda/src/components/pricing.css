@@ -1,0 +1,588 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.hero-container .left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5%;
+  color: #fff;
+}
+
+.access-text {
+  font-size: 2rem;
+}
+.access-text p{
+  margin-top: 100px;
+}
+.hero-container p span:last-child {
+  color: blue;
+}
+.access-text p span:nth-child(2),
+.access-text p span:first-child {
+  color: blue;
+}
+
+.access-text div p span {
+  color: blue;
+}
+
+.icon {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.icon > div {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.icon > div img {
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.icon > div p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .access-text {
+    font-size: 1.5rem;
+  }
+
+  .icon > div img {
+    height: 2.5rem;
+  }
+
+  .icon > div p {
+    font-size: 1rem;
+  }
+}
+
+.access-text .value {
+  position: relative;
+}
+
+.access-text .value:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  top: 20px;
+  left: calc(20% - 25px);
+  background: url(../Images/red.png);
+  background-size: cover;
+  z-index: 1;
+}
+
+
+  .hero-container .right-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 110vh;
+    background-image: url('../Images/bg1.png');
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+  }
+  
+  .form-container {
+    width: 55%;
+    height: 70%;
+    background-color: #fff;
+   
+    box-shadow: 0px 0px 20px rgba(244, 246, 247, 0.974);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    padding: 0px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar span {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .progress-bar .active {
+    color: #000;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .grid-container {
+
+/* 
+    border: 2px solid #BEBEBE; */
+border-radius: 4px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.2rem;
+  }
+  
+  .grid-item {
+
+    /* border: 2px solid black; */
+border-radius: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .grid-item.selected {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .plan-title {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .plan-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .plan-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: black;
+  }
+  
+  .total {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .per-month {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+  .form-container {
+    position: relative;
+  }
+  
+  .subscription-fee,
+  .limited-time-offer,
+  .total-message {
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .subscription-fee .price,
+  .limited-time-offer span,
+  .total-message .total-price {
+    font-weight: bold;
+  }
+  
+  .subscription-fee::before,
+  .limited-time-offer::before,
+  .total-message::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+  }
+  
+  .subscription-fee::before {
+    top: -10px;
+  }
+  
+  .subscription-fee::after,
+  .limited-time-offer::after,
+  .total-message::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  .limited-time-offer::after,
+  .total-message::after {
+    bottom: -30px;
+  }
+  
+  .subscription-fee .price {
+    ont-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: #3C4852;
+  }
+  
+  .limited-time-offer span {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+/* identical to box height, or 16px */
+
+display: flex;
+align-items: flex-end;
+text-align: center;
+letter-spacing: 0.03em;
+
+
+
+  }
+  
+  .total-message .total-price {
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 100%;
+/* identical to box height, or 24px */
+
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.03em;
+margin-top: -5px;
+color: #3C4852;
+  }
+    
+  .image {
+    position: absolute;
+width: 120px;
+height: 40.69px;
+left: 0px;
+bottom: 0px;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+    margin-top: 20px;
+    margin-left: auto;
+  }
+  
+  .cancel-button {
+    margin-top: 0px;
+    background-color:#fff;
+    border: none;
+    color:  #F77171;
+    border-color:  #F77171;
+    
+    /* padding: 10px 20px; */
+    margin-right: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .pay-button {
+    background-color: #47BA68;
+    border: none
+  }
+
+
+  .limited-time-offer-container {
+    box-sizing: border-box;
+    border: 1px solid #DE4313;
+    
+    display: flex;
+    align-items: flex-start;
+    margin-left: ;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2px 4px;
+    /* gap: 4px; */
+    background:linear-gradient(135deg, rgba(222, 67, 19, 0.2) 0%, rgba(222, 67, 19, 0.2) 0.75%, rgba(222, 67, 19, 0.2) 2.92%, rgba(222, 68, 20, 0.2) 6.37%, rgba(223, 69, 21, 0.2) 10.97%, rgba(223, 72, 22, 0.2) 16.59%, rgba(224, 75, 24, 0.2) 23.1%, rgba(225, 80, 27, 0.2) 30.37%, rgba(227, 86, 31, 0.2) 38.27%, rgba(229, 94, 36, 0.2) 46.66%, rgba(231, 104, 43, 0.2) 55.41%, rgba(235, 117, 51, 0.2) 64.39%, rgba(238, 132, 60, 0.2) 73.47%, rgba(243, 149, 71, 0.2) 82.52%, rgba(248, 169, 84, 0.2) 91.41%, rgba(254, 193, 99, 0.2) 100%);
+  }
+  
+  
+  /* .limited-time-offer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   */
+  .limited-time-offer {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 110px;
+  }
+  
+  
+  
+  
+
+   .offer-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 2px;
+  }
+  
+  .offer-details img {
+    width: 15px;
+    height: 15px;
+    margin-right: 250px; 
+
+
+    position: absolute;
+
+  }
+  
+  .offer-details p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #DE4313;
+    margin: 0;
+
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 120%;
+
+/* align-items: center;
+text-align: center; */
+  } 
+  
+/*nj*/
+
+
+  
+/*hh*/
+.form-container {
+  width: 450px;
+  background: #fff;
+  padding: 0px;
+  
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-gap: 0px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-block {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #BEBEBE;
+  margin: 2px;
+  padding: 0px;
+}
+.plan-1{
+  background: #E7E7E7;
+  border: 2px solid #BEBEBE;
+  border-radius: 4px;
+  padding: 0px;
+}
+.plan-2{
+  background: #D7EDDD;
+border: 2px solid #47BA68;
+border-radius: 4px;
+}
+.plan-3{
+  background: #FFFFFF;
+border-radius: 8px;
+}
+.plan-title {
+  margin-bottom: -5px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 120%;
+align-items: center;
+text-align: center;
+display: flex;
+padding-top: 0px;
+padding-bottom: -5px;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.total, .per-month {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.per-month {
+  margin-top: -4px;
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 120%;
+}
+.total{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 120%;
+gap: 2px;
+/* or 19px */
+
+display: flex;
+align-items: center;
+text-align: center;
+}
+.FaRupeeSign , .total{
+  flex-direction: row;
+ 
+}
+.FaRupeeSign , .per-month{
+  flex-direction: row;
+  font-weight: 400;
+ 
+}
+.p1{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 120%;
+/* or 14px */
+background: #F77171;
+border-radius: 0px 0px 4px 4px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+position: absolute;
+width: 71px;
+height: 14px;
+left: 62px;
+top: 160px;
+display: flex;
+align-items: flex-start;
+text-align: center;
+
+color: #FFFFFF;
+}
+.p2{
+  position: absolute;
+width: 121px;
+height: 16px;
+left: 62px;
+background: #47BA68;
+border-radius: 0px 0px 4px 4px;
+
+position: absolute;
+width: 71px;
+height: 14px;
+left: 62px;
+top: 230px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 120%;
+/* or 14px */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+}
+.b{
+  color: #BEBEBE;
+  margin-top: 5px;
+}
+.limited-time-offer span{
+  color: #DE4313;
+}
